@@ -1,0 +1,24 @@
+[global_config]
+[keybindings]
+  go_left = <Alt>h
+  go_down = <Alt>j
+  go_right = <Alt>l
+  go_up = <Alt>k
+[profiles]
+  [[default]]
+    scroll_on_output = False
+    font = DejaVu Sans Mono 10
+    use_system_font = False
+    scrollback_infinite = True
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+			position = 0:0
+[plugins]
