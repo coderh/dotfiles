@@ -142,3 +142,6 @@ filetype plugin indent on
 syntax on
 "format go code after saving
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+" Fix file swap bug
+set directory=.,$TEMP
