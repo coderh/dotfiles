@@ -22,3 +22,6 @@ alias ga="git add"
 
 # active rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# rotate second screen
+xrandr --output HDMI2 --rotate left
