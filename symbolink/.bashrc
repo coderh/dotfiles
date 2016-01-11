@@ -5,7 +5,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
 # Golang
 export GOPATH=~/workspace/go/
-export PATH=/usr/local/go/bin/:$PATH
+export PATH=$PATH:/usr/local/go/bin
 export GOREPO=~/workspace/go/src/github.com/invkrh/
 
 # Scala
