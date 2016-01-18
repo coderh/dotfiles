@@ -14,7 +14,8 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 # Git shortcuts
 alias gs="git status"
-alias gd="git diff ."
+alias gd="git diff"
+alias ga="git add"
 
 # active nvm
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh" # Load nvm into a shell session *as a function*
