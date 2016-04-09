@@ -49,4 +49,6 @@ Dual OS installation from scratch
 * Install boot-loader in ESP !!!
 * Some straightforward configuration
 
+**If any boot problem, look for (boot-repair)[https://help.ubuntu.com/community/Boot-Repair]
+
 **If the Internet is always connected, everything will be fine. Reboot PC and enjoy.**
