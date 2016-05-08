@@ -1,5 +1,12 @@
 [ -n "$PS1" ] && source ~/.bash_profile;
 
+# Repo
+export BLOG_REPO=~/workspace/doc/personal-blog/
+export NOTEBOOK_REPO=~/workspace/python/notebook/
+
+# Maven
+export PATH=~/lib/apache-maven-3.3.9/bin:$PATH
+
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
@@ -22,3 +29,6 @@ alias ga="git add"
 
 # active rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# added by Anaconda3 4.0.0 installer
+export PATH="/home/invkrh/lib/anaconda3/bin:$PATH"
