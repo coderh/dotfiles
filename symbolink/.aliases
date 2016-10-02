@@ -149,5 +149,5 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 
 # Personal alias
 alias notebook="jupyter notebook ~/workspace/python/notebook"
-alias blog_site="hugo -t slim --buildDrafts server -wD --bind `ip_wlan` --baseURL http://`ip_wlan` -s ~/workspace/doc/personal-blog"
-alias blog_edit="atom ~/workspace/doc/personal-blog"
+# alias blog_site="hugo -t slim --buildDrafts server -wD --bind `ip_wlan` --baseURL http://`ip_wlan` -s ~/workspace/doc/personal-blog"
+# alias blog_edit="atom ~/workspace/doc/personal-blog"
