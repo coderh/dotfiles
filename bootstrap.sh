@@ -31,6 +31,7 @@ function init() {
 	link .vimrc
 	link .wgetrc
 	link .vim
+	link .git-completion.bash
 	source ~/.bash_profile;
 }
 
