@@ -19,7 +19,7 @@ rm ./netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb
 # sogou pinyin is not stable on loki
 
 # Install add-apt-repository
-# add-apt-repository is remove from official loki repo for security reasons 
+# add-apt-repository is remove from official loki repo for security reasons, need to reinstall 
 sudo apt install -y software-properties-common python-software-properties
 
 # Install tweak ppa
@@ -34,13 +34,16 @@ sudo add-apt-repository ppa:numix/ppa
 # Install java
 sudo add-apt-repository ppa:webupd8team/java
 
+# Install graphic driver
+sudo add-apt-repository ppa:graphics-drivers/ppa
+
 # Install update apt list
 sudo apt-get update
 
 # Install software
 sudo apt-get install -y git vim htop terminator \
 elementary-tweaks mpv numix-icon-theme-circle \
-oracle-java8-installer 
+oracle-java8-installer software-properties-gtk 
 
 # Terminator
 # - short cut
@@ -48,8 +51,7 @@ oracle-java8-installer
 
 # Install docker
 sudo apt-get install -y apt-transport-https ca-certificates
-sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 \
---recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 sudo su -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list'
 sudo apt-get update
 sudo apt-get purge lxc-docker
@@ -66,3 +68,10 @@ docker run hello-world
 sudo su -c 'curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
+
+# Install utorrent
+wget http://download-new.utorrent.com/endpoint/utserver/os/linux-x64-ubuntu-13-04/track/beta/ -O utserver.tar.gz
+sudo tar -zxvf utserver.tar.gz -C /opt/
+sudo chmod 777 /opt/utorrent-server-alpha-v3_3/
+sudo ln -s /opt/utorrent-server-alpha-v3_3/utserver /usr/bin/utserver
+utserver -settingspath /opt/utorrent-server-alpha-v3_3/
