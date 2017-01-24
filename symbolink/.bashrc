@@ -1,16 +1,19 @@
 [ -n "$PS1" ] && source ~/.bash_profile;
 
+# Git auto completion
+source ~/bin/git-completion.bash
+source ~/bin/load-aws-keys.sh
+
 # AWS KEY
-source ~/load-aws-keys.sh
+# source ~/load-aws-keys.sh
 
 # Project repo dirs
 export DATA_OPS_REPO=~/workspace/ops/data_ops
-export BOTDET_REPO=~/workspace/scala/confucius/botdet
-export BRUTUS_REPO=~/workspace/java/data_brutus/
+export DATA_ENG_REPO=~/workspace/lbc-data-engineering
+export CONFUCIUS_REPO=$DATA_ENG_REPO/lbc_confucius_reborn
 
 # Airflow
-# export AIRFLOW_HOME=~/lib/airflow
-export AIRFLOW_HOME=~/airflow
+export AIRFLOW_HOME=~/lib/airflow
 
 # Confluent
 export CONFLUENT_HOME=~/lib/confluent-2.0.0
@@ -19,16 +22,18 @@ export CONFLUENT_HOME=~/lib/confluent-2.0.0
 export ELASTIC_HOME=~/lib/elasticsearch-1.7.5
 
 # Packer
-export PATH=~/lib/packer/:$PATH
-export PYTHONPATH=~/workspace/java/data_brutus/scheduling/modules/:$PYTHONPATH
+# export PATH=~/lib/packer/:$PATH
+# export PYTHONPATH=~/workspace/java/data_brutus/scheduling/modules/:$PYTHONPATH
 
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export SCALA_HOME=~/lib/scala-2.11.8
+export PATH=~/lib/scala-2.11.8/bin:$PATH
 
 # Maven
-export PATH=/opt/apache-maven-3.3.9/bin:$PATH
+export PATH=~/lib/apache-maven-3.3.9/bin:$PATH
 
-# home bin path
+# Home bin path
 export PATH=~/bin:$PATH
 
 # Golang
@@ -53,10 +58,11 @@ alias gc="git checkout"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # rotate second screen
-xrandr --output DP1 --rotate right
-
-# added by Anaconda3 4.0.0 installer
-# export PATH="/home/invkrh/lib/anaconda3/bin:$PATH"
+xrandr --output HDMI1 --primary
+xrandr --output HDMI2 --rotate left
 
 # use python2
 export PATH="/home/invkrh/lib/anaconda3/envs/py27/bin:$PATH"
+
+# added by Anaconda3 4.1.1 installer
+# export PATH="/home/invkrh/lib/anaconda3/bin:$PATH"

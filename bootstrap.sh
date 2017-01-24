@@ -31,7 +31,7 @@ function init() {
 	link .vimrc
 	link .wgetrc
 	link .vim
-	link .scalafmt
+	link .scalafmt.conf
 	source ~/.bash_profile;
 }
 
