@@ -1,5 +1,9 @@
 [ -n "$PS1" ] && source ~/.bash_profile;
 
+# Hugo Path
+hugo_version=0.17
+export PATH=~/lib/hugo_${hugo_version}_linux_amd64:$PATH
+
 # Repo
 export BLOG_REPO=~/workspace/doc/personal-blog/
 export NOTEBOOK_REPO=~/workspace/python/notebook/
@@ -11,8 +15,8 @@ export PATH=~/lib/apache-maven-3.3.9/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
 # Golang
-export GOPATH=~/workspace/go/
 export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/workspace/go/
 export GOREPO=~/workspace/go/src/github.com/invkrh/
 
 # Scala
