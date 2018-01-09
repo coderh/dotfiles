@@ -57,6 +57,14 @@
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+	lg = !"git lg1"
+
+	lgs = !"git lg -10"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -76,6 +84,7 @@
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+	editor = vim
 
 [color]
 
@@ -174,6 +183,7 @@
 [alias]
 
 	history = log --graph --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ar)%Creset'  --name-status -p
+	review = push origin HEAD:refs/publish/master
 
 [log]
 
